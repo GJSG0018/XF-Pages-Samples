@@ -5,8 +5,25 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="XFSplash.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" FontSize="30" 
-           HorizontalTextAlignment="Center"/>
-  </StackLayout>
+  <Grid>
+    <Image
+      Aspect="AspectFill"
+      >
+      <Image.Source>
+        <OnPlatform
+          x:TypeArguments="ImageSource"
+          iOS="MainPageImg.jpg"
+          Android="MainPageImg.jpg"
+          WinPhone="Assets/MainPageImg.jpg"
+          />
+      </Image.Source>
+    </Image>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+      <Label Text="{Binding Title}" FontSize="30"
+             HorizontalTextAlignment="Center"
+             TextColor="#a64dff"
+             />
+    </StackLayout>
+  </Grid>
 </ContentPage>

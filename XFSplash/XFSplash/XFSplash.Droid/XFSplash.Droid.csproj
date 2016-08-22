@@ -158,6 +158,7 @@
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\drawable\SplashBG.jpg" />
+    <AndroidResource Include="Resources\drawable\MainPageImg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFSplash\XFSplash.csproj">
