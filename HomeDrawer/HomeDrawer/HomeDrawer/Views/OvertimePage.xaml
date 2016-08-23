@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="加班申請"
+             x:Class="HomeDrawer.Views.OvertimePage">
+
+  <StackLayout
+    Margin="20"
+    Orientation="Vertical">
+    <Label Text="加班日期" />
+    <DatePicker
+      Date="{Binding 加班日期 , Mode=TwoWay}"
+      Format="yyyy-MM-dd"
+      />
+    <Label Text="加班時間" />
+    <TimePicker
+      Time="{Binding 加班時間 , Mode=TwoWay}"
+      Format="HH點mm分"
+      />
+    <Label Text="加班時數" />
+    <Entry 
+      Text="{Binding 加班時數, Mode=TwoWay}"
+      Keyboard="Numeric"
+      />
+    <Button
+      Text="送出"
+      Command="{Binding 加班申請送出Command}"
+      HorizontalOptions="Center"
+      />
+
+  </StackLayout>
+
+</ContentPage>

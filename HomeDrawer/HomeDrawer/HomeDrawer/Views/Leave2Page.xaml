@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="請假申請"
+             x:Class="HomeDrawer.Views.Leave2Page">
+
+  <StackLayout
+    Orientation="Vertical"
+    HorizontalOptions="Center" VerticalOptions="Center"
+    >
+    <Label Text="開始日期" />
+    <DatePicker 
+      Date="{Binding 開始日期 , Mode=TwoWay}"
+      Format="yyyy-MM-dd"
+      />
+    <Label Text="結束日期" />
+    <DatePicker
+     Date="{Binding 結束日期 , Mode=TwoWay}"
+     Format="yyyy-MM-dd"
+      />
+    <Button
+      Text="送出"
+      Command="{Binding 請假送出Command}"
+      HorizontalOptions="Center"
+      />
+  </StackLayout>
+</ContentPage>

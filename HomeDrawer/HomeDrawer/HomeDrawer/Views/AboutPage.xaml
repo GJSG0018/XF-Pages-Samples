@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:Helper="clr-namespace:HomeDrawer.Helper"
+             x:Class="HomeDrawer.Views.AboutPage">
+
+  <StackLayout
+    HorizontalOptions="Center" VerticalOptions="Center"
+    >
+    <Label
+      Text="多奇創意 員工行動平台"
+      FontSize="30"
+      HorizontalOptions="Center" VerticalOptions="Center"
+      />
+    <Label
+      Text="{x:Static Helper:AppHelper.版本資訊}"
+      FontSize="16"
+      FontAttributes="Bold,Italic"
+      HorizontalOptions="Center" VerticalOptions="Center"
+      />
+  </StackLayout>
+</ContentPage>

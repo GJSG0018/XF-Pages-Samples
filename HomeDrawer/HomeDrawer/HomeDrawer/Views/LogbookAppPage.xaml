@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="工作報告申請"          
+             x:Class="HomeDrawer.Views.LogbookAppPage">
+
+  <StackLayout
+    Margin="20"
+    Orientation="Vertical">
+    <Label Text="工作日期" />
+    <DatePicker
+      Date="{Binding 工作日期 , Mode=TwoWay}"
+      Format="yyyy-MM-dd"
+      />
+    <Label Text="工作項目" />
+    <Editor
+      HeightRequest="150" 
+      Text="{Binding 工作項目, Mode=TwoWay}"
+      />
+    <Label Text="工作時數" />
+    <Entry
+      Text="{Binding 工作時數, Mode=TwoWay}"
+      Keyboard="Numeric"
+      />
+    <Button
+      Text="送出"
+      Command="{Binding 工作報告申請送出Command}"
+      HorizontalOptions="Center"
+      />
+
+  </StackLayout>
+</ContentPage>

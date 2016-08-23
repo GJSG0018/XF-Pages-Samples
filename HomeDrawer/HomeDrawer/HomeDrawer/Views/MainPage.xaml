@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:local="clr-namespace:HomeDrawer.Views"
+             x:Class="HomeDrawer.Views.MainPage"
+             Title="MainPage">
+
+  <MasterDetailPage.Master >
+    <ContentPage Title="功能表" Icon="hamburger.png">
+      <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                  iOS="0,20,0,0" Android="0" WinPhone="0,0"
+                  />
+      </ContentPage.Padding>
+
+      <ContentPage.Resources>
+        <ResourceDictionary>
+          <Style x:Key="MenuItemLevel1Style" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Margin" Value="35,10,0,0" />
+          </Style>
+          <Style x:Key="MenuItemLevel2Style" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Margin" Value="60,10,0,0" />
+          </Style>
+        </ResourceDictionary>
+      </ContentPage.Resources>
+      <StackLayout
+        Orientation="Vertical" BackgroundColor="#80bfff"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+          HeightRequest="100"          
+          Orientation="Vertical"
+          VerticalOptions="Center"
+          BackgroundColor="#0080ff"
+          >
+          <Label
+            Text ="多奇創意"
+            FontSize="30"
+            TextColor="White"
+            HorizontalOptions="Center" VerticalOptions="Center"
+            Margin="0,10,0,0"
+                    />
+          <Label
+            Text ="員工行動平台"
+            FontSize="20"
+            TextColor="White"
+            HorizontalOptions="Center" VerticalOptions="Center"
+                    />
+        </StackLayout>
+
+        <Label
+          Text ="加班申請"
+          Style="{StaticResource MenuItemLevel1Style}"
+          >
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer
+                Command="{Binding 加班申請Command}"/>            
+          </Label.GestureRecognizers>
+        </Label>
+        <Label
+          Text ="請假系統"
+          Style="{StaticResource MenuItemLevel1Style}"
+          >
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer
+                Command="{Binding 請假系統Command}"/>
+          </Label.GestureRecognizers>
+        </Label>
+        <Label
+          Text ="工作報告"
+          Style="{StaticResource MenuItemLevel1Style}"
+          />
+        <Label
+          Text ="填寫" 
+          Style="{StaticResource MenuItemLevel2Style}"
+          >
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer
+                Command="{Binding 工作報告填寫Command}"/>
+          </Label.GestureRecognizers>
+        </Label>
+        <Label
+          Text ="查詢" 
+          Style="{StaticResource MenuItemLevel2Style}"
+          >
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer
+                Command="{Binding 工作報告查詢Command}"/>
+          </Label.GestureRecognizers>
+        </Label>
+        <Label
+          Text ="關於"
+          Style="{StaticResource MenuItemLevel1Style}"
+          >
+          <Label.GestureRecognizers>
+            <TapGestureRecognizer
+                Command="{Binding 關於Command}"/>
+          </Label.GestureRecognizers>
+        </Label>
+
+      </StackLayout>
+    </ContentPage>
+  </MasterDetailPage.Master>
+  <!--<MasterDetailPage.Detail>
+    <local:OvertimePage />
+  </MasterDetailPage.Detail>-->
+</MasterDetailPage>
