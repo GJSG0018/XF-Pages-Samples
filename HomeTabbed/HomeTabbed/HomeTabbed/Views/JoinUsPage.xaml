@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="加入我們"
+             BackgroundColor="#ccffe6"
+             Icon="join.png"
+             x:Class="HomeTabbed.Views.JoinUsPage">
+  <StackLayout
+    Orientation="Vertical"
+    HorizontalOptions="Center" VerticalOptions="Center"
+    >
+    <Button Text="了解更多" Command="{Binding 了解更多Command}"
+            HorizontalOptions="Center"
+            />
+  </StackLayout>
+
+</ContentPage>

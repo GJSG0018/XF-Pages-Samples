@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="歡迎加入我們"
+             BackgroundColor="#ffe6ff"
+             x:Class="HomeTabbed.Views.Other1ContentPage">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem
+      Command="{Binding 首頁Command}"
+      AutomationId="searchCommand"
+      Text="首頁"
+      Order="Primary"
+      Priority="0">
+      <ToolbarItem.Icon AutomationId="searchIcon">
+        <OnPlatform x:TypeArguments="FileImageSource"
+          iOS="home.png"
+          Android="home.png"
+          WinPhone="Assets/home.png" />
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
+
+  <StackLayout
+    Orientation="Vertical"
+    HorizontalOptions="Center" VerticalOptions="Center"
+    >
+    <Button Text="立即加入" Command="{Binding 立即加入Command}"
+            HorizontalOptions="Center"
+            />
+  </StackLayout>
+</ContentPage>
