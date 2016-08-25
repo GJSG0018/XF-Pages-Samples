@@ -8,5 +8,11 @@ namespace HomeTabbed.Views
         {
             InitializeComponent();
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            // 停止硬體回上一頁按鍵運作
+            return true;
+        }
     }
 }

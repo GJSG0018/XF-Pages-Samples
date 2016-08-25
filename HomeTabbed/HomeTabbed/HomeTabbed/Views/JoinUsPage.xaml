@@ -12,6 +12,7 @@
     HorizontalOptions="Center" VerticalOptions="Center"
     >
     <Button Text="了解更多" Command="{Binding 了解更多Command}"
+            TextColor="#000000"
             HorizontalOptions="Center"
             />
   </StackLayout>

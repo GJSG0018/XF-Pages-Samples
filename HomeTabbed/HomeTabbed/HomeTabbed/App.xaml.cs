@@ -11,8 +11,7 @@ namespace HomeTabbed
         {
             InitializeComponent();
 
-            //NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
-            NavigationService.NavigateAsync("/HomePage");
+            NavigationService.NavigateAsync(new System.Uri("http://vulcan.net/HomePage", System.UriKind.Absolute));
         }
 
         protected override void RegisterTypes()

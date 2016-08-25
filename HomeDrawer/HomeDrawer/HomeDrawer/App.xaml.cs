@@ -11,7 +11,7 @@ namespace HomeDrawer
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage/NaviPage/AboutPage");
+            NavigationService.NavigateAsync(new System.Uri("http://vulcan.net/MainPage/NaviPage/AboutPage", System.UriKind.Absolute));
         }
 
         protected override void RegisterTypes()

@@ -4,7 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              Title="歡迎加入我們"
-             BackgroundColor="#ffe6ff"
+             BackgroundColor="#ccffe6"
              x:Class="HomeTabbed.Views.Other1ContentPage">
   <ContentPage.ToolbarItems>
     <ToolbarItem
@@ -27,6 +27,7 @@
     HorizontalOptions="Center" VerticalOptions="Center"
     >
     <Button Text="立即加入" Command="{Binding 立即加入Command}"
+            TextColor="#000000"
             HorizontalOptions="Center"
             />
   </StackLayout>

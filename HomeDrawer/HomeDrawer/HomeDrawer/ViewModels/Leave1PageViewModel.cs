@@ -25,7 +25,7 @@ namespace HomeDrawer.ViewModels
 
         private void 請假申請()
         {
-            _navigationService.NavigateAsync("Leave2Page");
+            _navigationService.NavigateAsync(new Uri("Leave2Page", UriKind.Relative));
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)

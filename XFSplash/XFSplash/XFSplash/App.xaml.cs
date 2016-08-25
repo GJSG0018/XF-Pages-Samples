@@ -1,4 +1,5 @@
 ﻿using Prism.Unity;
+using System;
 using XFSplash.Views;
 
 namespace XFSplash
@@ -11,7 +12,7 @@ namespace XFSplash
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("SplashPage");
+            NavigationService.NavigateAsync(new Uri("http://vulcan.net/SplashPage", UriKind.Absolute));
         }
 
         protected override void RegisterTypes()

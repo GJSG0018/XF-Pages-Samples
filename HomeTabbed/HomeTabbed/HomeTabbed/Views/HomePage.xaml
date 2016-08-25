@@ -5,7 +5,9 @@
             prism:ViewModelLocator.AutowireViewModel="True"
             xmlns:local="clr-namespace:HomeTabbed.Views"
             TabbedPage.BarBackgroundColor="#00b300"
-            TabbedPage.BarTextColor="#e6ffe6"
+            TabbedPage.BarTextColor="#e6ffe6"  
+            NavigationPage.HasNavigationBar="false"
+            Title="多奇創意"
             x:Class="HomeTabbed.Views.HomePage">
 
   <local:MainPage  />

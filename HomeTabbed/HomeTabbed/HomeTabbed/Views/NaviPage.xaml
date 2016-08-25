@@ -4,7 +4,8 @@
                 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                 prism:ViewModelLocator.AutowireViewModel="True"
                 NavigationPage.BarBackgroundColor="#00b300"
-                NavigationPage.BarTextColor="#e6ffe6"
+                NavigationPage.BarTextColor="#FFFFFF"
+                Title="多奇創意"
                 x:Class="HomeTabbed.Views.NaviPage">
 
 </NavigationPage>

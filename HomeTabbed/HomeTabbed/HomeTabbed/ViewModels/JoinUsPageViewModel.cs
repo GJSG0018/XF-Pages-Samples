@@ -26,7 +26,7 @@ namespace HomeTabbed.ViewModels
 
         private async void 了解更多()
         {
-            await _navigationService.NavigateAsync("NaviPage/Other1ContentPage");
+            await _navigationService.NavigateAsync(new Uri("NaviPage/Other1ContentPage", UriKind.Relative));
         }
     }
 }

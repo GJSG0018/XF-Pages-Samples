@@ -41,27 +41,27 @@ namespace HomeDrawer.ViewModels
 
         private void 請假系統()
         {
-            _navigationService.NavigateAsync("/MainPage/NaviPage/Leave1Page");
+            _navigationService.NavigateAsync(new Uri("http://vulcan.net/MainPage/NaviPage/Leave1Page", UriKind.Absolute));
         }
 
         private void 工作報告填寫()
         {
-            _navigationService.NavigateAsync("/MainPage/NaviPage/LogbookAppPage");
+            _navigationService.NavigateAsync(new Uri("http://vulcan.net/MainPage/NaviPage/LogbookAppPage", UriKind.Absolute));
         }
 
         private void 工作報告查詢()
         {
-            _navigationService.NavigateAsync("/MainPage/NaviPage/LogbookQuery");
+            _navigationService.NavigateAsync(new Uri("http://vulcan.net/MainPage/NaviPage/LogbookQuery", UriKind.Absolute));
         }
 
         private void 加班申請()
         {
-            _navigationService.NavigateAsync("/MainPage/NaviPage/OvertimePage");
+            _navigationService.NavigateAsync(new Uri("http://vulcan.net/MainPage/NaviPage/OvertimePage", UriKind.Absolute));
         }
 
         private void 關於()
         {
-            _navigationService.NavigateAsync("/MainPage/NaviPage/AboutPage");
+            _navigationService.NavigateAsync(new Uri("http://vulcan.net/MainPage/NaviPage/AboutPage", UriKind.Absolute));
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)

@@ -89,7 +89,7 @@ namespace XFSplash.ViewModels
             }
 
             處理訊息 = "導航到首頁頁面";
-            await _navigationService.NavigateAsync("MainPage?title=恭喜您，已經完成 Splash 練習");
+            await _navigationService.NavigateAsync(new Uri("http://vulcan.net/MainPage?title=恭喜您，已經完成 Splash 練習", UriKind.Absolute));
         }
     }
 }
