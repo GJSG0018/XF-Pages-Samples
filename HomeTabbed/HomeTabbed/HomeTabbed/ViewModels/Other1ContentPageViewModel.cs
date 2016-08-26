@@ -34,7 +34,7 @@ namespace HomeTabbed.ViewModels
             首頁Command = new DelegateCommand(首頁);
         }
 
-        private async void 首頁()
+        public async void 首頁()
         {
             await _navigationService.NavigateAsync(new Uri("http://vulcan.net/HomePage/JoinUsPage", UriKind.Absolute));
         }
