@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:UserControls="clr-namespace:CustomDiag.UserControls"
+             x:Class="CustomDiag.Views.MainPage"
+             BackgroundColor="#ffaa80"
+             Title="MainPage">
+  <Grid>
+    <StackLayout
+      Spacing="30"
+      HorizontalOptions="Center" VerticalOptions="Center">
+      <Button Text="客製化對話窗"
+              Command="{Binding 客製化對話窗Command}"
+               />
+      <Label Text="{Binding 使用者輸入內容}"/>
+      <Button Text="處理中遮罩" 
+              Command="{Binding 處理中遮罩Command}"/>
+    </StackLayout>
+    <UserControls:ProcessingUserControl 
+      IsVisible="{Binding 處理中ViewModel.顯示處理中遮罩}"
+      />
+    <UserControls:CustDialogUserControl 
+      IsVisible="{Binding 客製化使用者對話窗ViewModel.顯示客製化使用者對話窗}"
+      />
+  </Grid>
+</ContentPage>

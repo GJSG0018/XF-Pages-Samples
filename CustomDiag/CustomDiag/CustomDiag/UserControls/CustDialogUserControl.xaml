@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomDiag.UserControls.CustDialogUserControl">
+
+  <!--<ScrollView    
+    Orientation="Vertical"
+    VerticalOptions="Fill" HorizontalOptions="Fill"
+      >
+  </ScrollView>-->
+  <Grid
+    HorizontalOptions="Fill" VerticalOptions="Fill"
+    >
+    <BoxView
+      BackgroundColor="#BB000000"
+      />
+    <BoxView
+      BackgroundColor="#FFFFFFFF"
+      Margin="20,70"
+      />
+    <StackLayout
+      Margin="40,80"
+      HorizontalOptions="Fill" VerticalOptions="Start"
+      >
+      <Label
+        Text="{Binding 客製化使用者對話窗ViewModel.對話窗主題}"
+        TextColor="#000000"
+        FontSize="30"
+        HorizontalOptions="Center"
+        Margin="0,40,0,20"
+        />
+      <Label
+        Text="{Binding 客製化使用者對話窗ViewModel.對話窗訊息}"
+        TextColor="#000000"
+        Margin="20,20,20,30"
+        FontSize="18"
+        HorizontalTextAlignment="Center"
+        HorizontalOptions="Center"
+        />
+      <Label Text="帳號" />
+      <Entry
+        HorizontalOptions="Fill"
+        Text="{Binding 客製化使用者對話窗ViewModel.對話窗使用者帳號}"
+        />
+      <Label Text="密碼" />
+      <Entry
+        HorizontalOptions="Fill"
+        Text="{Binding 客製化使用者對話窗ViewModel.對話窗使使用者密碼}"
+        IsPassword="True"
+        />
+      <StackLayout
+        Orientation="Horizontal"
+        HorizontalOptions="Center"
+        >
+        <Button
+          Text="確定"
+          Command="{Binding 客製化對話窗確定Command}"
+        />
+        <Button
+          Text="取消"
+          Command="{Binding 客製化對話窗取消Command}"
+        />
+      </StackLayout>
+    </StackLayout>
+  </Grid>
+
+</ContentView>
