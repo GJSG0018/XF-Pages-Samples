@@ -3,11 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CustomDiag.UserControls.CustDialogUserControl">
 
-  <!--<ScrollView    
-    Orientation="Vertical"
-    VerticalOptions="Fill" HorizontalOptions="Fill"
-      >
-  </ScrollView>-->
   <Grid
     HorizontalOptions="Fill" VerticalOptions="Fill"
     >
@@ -41,12 +36,14 @@
       <Entry
         HorizontalOptions="Fill"
         Text="{Binding 客製化使用者對話窗ViewModel.對話窗使用者帳號}"
+        TextColor="Black"
         />
       <Label Text="密碼" />
       <Entry
         HorizontalOptions="Fill"
         Text="{Binding 客製化使用者對話窗ViewModel.對話窗使使用者密碼}"
         IsPassword="True"
+        TextColor="Black"
         />
       <StackLayout
         Orientation="Horizontal"

@@ -71,6 +71,5 @@ namespace CustomDiag.ViewModels
             顯示處理中遮罩 = false;
             忙碌中控制項使用中 = false;
         }
-
     }
 }
