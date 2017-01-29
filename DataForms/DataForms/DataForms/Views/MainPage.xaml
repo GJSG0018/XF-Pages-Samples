@@ -5,81 +5,88 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="DataForms.Views.MainPage"
              Title="員工資料輸入">
-  <ScrollView
-    Orientation="Vertical"
-    >
-    <StackLayout
-      Margin="20,20"
-      HorizontalOptions="Fill" VerticalOptions="Start">
-      <Grid
-        HorizontalOptions="Fill" VerticalOptions="Center">
-        <BoxView
-          Color="#0066ff"
-          HeightRequest="30" WidthRequest="180"/>
-        <Label Text="員工基本資料"
-               HorizontalOptions="Center"
-               TextColor="White"
-               FontSize="18"/>
-      </Grid>
-      <Label Text="中文姓名" />
-      <Entry />
-      <Label Text="英文姓名" />
-      <Entry />
-      <Label Text="工號" />
-      <Entry />
-      <Label Text="部門" />
-      <Entry />
-      <Label Text="職稱" />
-      <Entry />
-      <Label Text="職等" />
-      <Entry />
-      <Label Text="到職日" />
-      <DatePicker Format="yyyy-MM-dd" />
 
-      <Grid
-      HorizontalOptions="Fill" VerticalOptions="Center">
-        <BoxView
-          Color="#0066ff"
-          HeightRequest="30" WidthRequest="180"/>
-        <Label Text="IT 資源"
-               HorizontalOptions="Center"
-               TextColor="White"
-               FontSize="18"/>
-      </Grid>
-      <Label Text="AD Domain帳號" />
-      <Switch  />
-      <Label Text="電子郵件帳號" />
-      <Switch  />
-      <Label Text="SAP帳號" />
-      <Switch  />
-      <Label Text="上網需求" />
-      <Switch  />
+    <!--表單輸入頁面設計範例-->
+    <!--在這個練習專案中，您將要設計一個表單，讓使用者填寫，並且這個表單有很多項目，會超過螢幕高度，因此，您需要使用 ScrollView 讓使用者可以捲動填寫所有資料。-->
 
-      <Grid
-       HorizontalOptions="Fill" VerticalOptions="Center">
-        <BoxView
-          Color="#0066ff"
-          HeightRequest="30" WidthRequest="180"/>
-        <Label Text="申請設備"
-               HorizontalOptions="Center"
-               TextColor="White"
-               FontSize="18"/>
-      </Grid>
-      <Label Text="機車停車位" />
-      <Switch  />
-      <Label Text="汽車停車位" />
-      <Switch  />
-      <Label Text="筆電" />
-      <Switch  />
-      <Label Text="PC" />
-      <Switch  />
-      <Label Text="名片" />
-      <Switch  />
-      <Label Text="電話分機" />
-      <Switch  />
-      <Label Text="無塵衣" />
-      <Switch  />
-      <Label Text="" />
-    </StackLayout>
-  </ScrollView>
+    <ScrollView
+        Orientation="Vertical"
+        >
+        <StackLayout
+            Margin="20,20"
+            HorizontalOptions="Fill" VerticalOptions="Start">
+            <!--建立一個標題色塊，用來區分不同資料類型-->
+            <Grid
+                HorizontalOptions="Fill" VerticalOptions="Center">
+                <BoxView
+                    Color="#0066ff"
+                    HeightRequest="30" WidthRequest="180"/>
+                <Label Text="員工基本資料"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontSize="18"/>
+            </Grid>
+            <Label Text="中文姓名" />
+            <Entry />
+            <Label Text="英文姓名" />
+            <Entry />
+            <Label Text="工號" />
+            <Entry />
+            <Label Text="部門" />
+            <Entry />
+            <Label Text="職稱" />
+            <Entry />
+            <Label Text="職等" />
+            <Entry />
+            <Label Text="到職日" />
+            <DatePicker Format="yyyy-MM-dd" />
+
+            <!--建立一個標題色塊，用來區分不同資料類型-->
+            <Grid
+                HorizontalOptions="Fill" VerticalOptions="Center">
+                <BoxView
+                    Color="#0066ff"
+                    HeightRequest="30" WidthRequest="180"/>
+                <Label Text="IT 資源"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontSize="18"/>
+            </Grid>
+            <Label Text="AD Domain帳號" />
+            <Switch  />
+            <Label Text="電子郵件帳號" />
+            <Switch  />
+            <Label Text="SAP帳號" />
+            <Switch  />
+            <Label Text="上網需求" />
+            <Switch  />
+
+            <!--建立一個標題色塊，用來區分不同資料類型-->
+            <Grid
+                HorizontalOptions="Fill" VerticalOptions="Center">
+                <BoxView
+                    Color="#0066ff"
+                    HeightRequest="30" WidthRequest="180"/>
+                <Label Text="申請設備"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontSize="18"/>
+            </Grid>
+            <Label Text="機車停車位" />
+            <Switch  />
+            <Label Text="汽車停車位" />
+            <Switch  />
+            <Label Text="筆電" />
+            <Switch  />
+            <Label Text="PC" />
+            <Switch  />
+            <Label Text="名片" />
+            <Switch  />
+            <Label Text="電話分機" />
+            <Switch  />
+            <Label Text="無塵衣" />
+            <Switch  />
+            <Label Text="" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

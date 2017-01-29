@@ -4,10 +4,12 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="HomeTabbed.Views.MainPage"
-             Title="多奇創意"
+             Title="多奇數位創意"
              Icon="doggy.png"
              >
-  <WebView
+
+    <!--這個頁面相當的簡單，我們使用一個 WebView 控制項，將要顯示的網址，設定到 Source 屬性中-->
+    <WebView
     Source="http://www.miniasp.com/"
     />
 </ContentPage>

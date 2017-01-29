@@ -7,12 +7,17 @@
             TabbedPage.BarBackgroundColor="#00b300"
             TabbedPage.BarTextColor="#e6ffe6"  
             NavigationPage.HasNavigationBar="false"
-            Title="多奇創意"
+            Title="多奇數位創意"
             x:Class="HomeTabbed.Views.HomePage">
 
-  <local:MainPage  />
-  <local:NewsPage />
-  <local:OurProductPage />
-  <local:JoinUsPage />
+    <!--將公司內部網頁，串接到跨平台應用程式範例-->
+    <!--在這裡，將會透過標籤式頁面，將許多網頁串接到這個應用程式中，並且可以加入許多 Xamarin.Forms 的原生頁面與控制項。-->
+
+    <!--在這裡，我們並不會在這裡定義所有標籤頁面的每個子頁面內容，而是定義在其他的 .xaml 檔案內，
+    所以，我們需要定義一個新的命名空間，指向到這些子頁面，並且在這裡列出要加入到標籤頁面的所有子頁面-->
+    <local:MainPage  />
+    <local:NewsPage />
+    <local:OurProductPage />
+    <local:JoinUsPage />
 
 </TabbedPage>

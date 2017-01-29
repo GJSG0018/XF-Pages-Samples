@@ -7,110 +7,123 @@
              x:Class="HomeDrawer.Views.MainPage"
              Title="MainPage">
 
-  <MasterDetailPage.Master >
-    <ContentPage Title="功能表" Icon="hamburger.png">
-      <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
+    企業內部應用程式範例框架
+    這個專案將展示了一個企業內部應用程式的大概雛形，它有個導航抽屜，裡面有
+    加班申請、請假系統、工作報告這樣的頁面導航設計範例。
+    您可以透過這個範例框架，進行修改，就可以開始進行您的企業內部跨平台應用程式開發了。
+    
+    <MasterDetailPage.Master >
+        <ContentPage Title="功能表" Icon="hamburger.png">
+            <ContentPage.Padding>
+                <OnPlatform x:TypeArguments="Thickness"
                   iOS="0,20,0,0" Android="0" WinPhone="0,0"
                   />
-      </ContentPage.Padding>
+            </ContentPage.Padding>
 
-      <ContentPage.Resources>
-        <ResourceDictionary>
-          <Style x:Key="MenuItemLevel1Style" TargetType="Label">
-            <Setter Property="HorizontalOptions" Value="Start" />
-            <Setter Property="VerticalOptions" Value="Center" />
-            <Setter Property="FontSize" Value="Large" />
-            <Setter Property="TextColor" Value="White" />
-            <Setter Property="Margin" Value="35,10,0,0" />
-          </Style>
-          <Style x:Key="MenuItemLevel2Style" TargetType="Label">
-            <Setter Property="HorizontalOptions" Value="Start" />
-            <Setter Property="VerticalOptions" Value="Center" />
-            <Setter Property="FontSize" Value="Large" />
-            <Setter Property="TextColor" Value="White" />
-            <Setter Property="Margin" Value="60,10,0,0" />
-          </Style>
-        </ResourceDictionary>
-      </ContentPage.Resources>
-      <StackLayout
-        Orientation="Vertical" BackgroundColor="#80bfff"
-        VerticalOptions="FillAndExpand">
-        <StackLayout
-          HeightRequest="100"          
-          Orientation="Vertical"
-          VerticalOptions="Center"
-          BackgroundColor="#0080ff"
-          >
-          <Label
-            Text ="多奇數位創意"
-            FontSize="30"
-            TextColor="White"
-            HorizontalOptions="Center" VerticalOptions="Center"
-            Margin="0,10,0,0"
+            <ContentPage.Resources>
+                <!--在這裡定義了一些資源字典明確樣式項目，讓您可以在底下 XAML 中，快速設定各項UI屬性-->
+                <ResourceDictionary>
+                    <Style x:Key="MenuItemLevel1Style" TargetType="Label">
+                        <Setter Property="HorizontalOptions" Value="Start" />
+                        <Setter Property="VerticalOptions" Value="Center" />
+                        <Setter Property="FontSize" Value="Large" />
+                        <Setter Property="TextColor" Value="White" />
+                        <Setter Property="Margin" Value="35,10,0,0" />
+                    </Style>
+                    <Style x:Key="MenuItemLevel2Style" TargetType="Label">
+                        <Setter Property="HorizontalOptions" Value="Start" />
+                        <Setter Property="VerticalOptions" Value="Center" />
+                        <Setter Property="FontSize" Value="Large" />
+                        <Setter Property="TextColor" Value="White" />
+                        <Setter Property="Margin" Value="60,10,0,0" />
+                    </Style>
+                </ResourceDictionary>
+            </ContentPage.Resources>
+            <StackLayout
+                Orientation="Vertical" BackgroundColor="#80bfff"
+                VerticalOptions="FillAndExpand">
+                <StackLayout
+                    HeightRequest="100" 
+                    Orientation="Vertical"
+                    VerticalOptions="Center"
+                    BackgroundColor="#0080ff"
+                    >
+                    <Label
+                        Text ="多奇數位創意"
+                        FontSize="30"
+                        TextColor="White"
+                        HorizontalOptions="Center" VerticalOptions="Center"
+                        Margin="0,10,0,0"
+                        />
+                    <Label
+                        Text ="行動平台"
+                        FontSize="20"
+                        TextColor="White"
+                        HorizontalOptions="Center" VerticalOptions="Center"
+                        />
+                </StackLayout>
+
+                <Label
+                    Text ="加班申請"
+                    Style="{StaticResource MenuItemLevel1Style}"
+                    >
+                    <!--文字標籤的部分，使用手勢來判斷使用者是否有點選這個文字-->
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding 加班申請Command}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text ="請假系統"
+                    Style="{StaticResource MenuItemLevel1Style}"
+                    >
+                    <!--文字標籤的部分，使用手勢來判斷使用者是否有點選這個文字-->
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding 請假系統Command}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text ="工作報告"
+                    Style="{StaticResource MenuItemLevel1Style}"
                     />
-          <Label
-            Text ="行動平台"
-            FontSize="20"
-            TextColor="White"
-            HorizontalOptions="Center" VerticalOptions="Center"
-                    />
-        </StackLayout>
+                <Label
+                    Text ="填寫" 
+                    Style="{StaticResource MenuItemLevel2Style}"
+                    >
+                    <!--文字標籤的部分，使用手勢來判斷使用者是否有點選這個文字-->
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer   
+                            Command="{Binding 工作報告填寫Command}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label 
+                    Text ="查詢" 
+                    Style="{StaticResource MenuItemLevel2Style}"
+                    >
+                    <!--文字標籤的部分，使用手勢來判斷使用者是否有點選這個文字-->
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding 工作報告查詢Command}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Text ="關於"     
+                    Style="{StaticResource MenuItemLevel1Style}"
+                    >
+                    <!--文字標籤的部分，使用手勢來判斷使用者是否有點選這個文字-->
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding 關於Command}"/>
+                    </Label.GestureRecognizers>
+                </Label>
 
-        <Label
-          Text ="加班申請"
-          Style="{StaticResource MenuItemLevel1Style}"
-          >
-          <Label.GestureRecognizers>
-            <TapGestureRecognizer
-                Command="{Binding 加班申請Command}"/>            
-          </Label.GestureRecognizers>
-        </Label>
-        <Label
-          Text ="請假系統"
-          Style="{StaticResource MenuItemLevel1Style}"
-          >
-          <Label.GestureRecognizers>
-            <TapGestureRecognizer
-                Command="{Binding 請假系統Command}"/>
-          </Label.GestureRecognizers>
-        </Label>
-        <Label
-          Text ="工作報告"
-          Style="{StaticResource MenuItemLevel1Style}"
-          />
-        <Label
-          Text ="填寫" 
-          Style="{StaticResource MenuItemLevel2Style}"
-          >
-          <Label.GestureRecognizers>
-            <TapGestureRecognizer
-                Command="{Binding 工作報告填寫Command}"/>
-          </Label.GestureRecognizers>
-        </Label>
-        <Label
-          Text ="查詢" 
-          Style="{StaticResource MenuItemLevel2Style}"
-          >
-          <Label.GestureRecognizers>
-            <TapGestureRecognizer
-                Command="{Binding 工作報告查詢Command}"/>
-          </Label.GestureRecognizers>
-        </Label>
-        <Label
-          Text ="關於"
-          Style="{StaticResource MenuItemLevel1Style}"
-          >
-          <Label.GestureRecognizers>
-            <TapGestureRecognizer
-                Command="{Binding 關於Command}"/>
-          </Label.GestureRecognizers>
-        </Label>
-
-      </StackLayout>
-    </ContentPage>
-  </MasterDetailPage.Master>
-  <!--<MasterDetailPage.Detail>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    <!--因為使用 Prism架構開發，因此，在這裡不需要定義 Detail 內容-->
+    <!--<MasterDetailPage.Detail>
     <local:OvertimePage />
   </MasterDetailPage.Detail>-->
 </MasterDetailPage>
